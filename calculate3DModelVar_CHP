@@ -107,9 +107,9 @@ for MR=1:Pyramid
     % Build the clustered histograms
     HS = zeros(parS.clus,nr+1);
 
-    parS.mx = 1;
-    parS.my = 1;
-    parS.mz = 1;
+    % parS.mx = 1;
+    % parS.my = 1;
+    % parS.mz = 1;
     % histograms of 50 realizations (46%50)
     for i = 1:nr
         [HS(:,i), npatS] = CompHistRea(reaS(:,:,:,i), prototypeS, parS);
