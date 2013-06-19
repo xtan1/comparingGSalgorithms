@@ -48,6 +48,25 @@ realization1=reshape(Final,69,69,39,50);
 % save('JS_SGSIMlasttry.mat', 'DistMtrx1');
 
 
+%% 3D case
+clear all;
+load 'Ti_3Dchannel.mat';
+load 'CCSIM_3D_binary.mat';
+realization1=reshape(Final,69,69,39,50);
+
+% 
+% %load 'new_cont.mat';
+% load 'CCSIM_cont_re.mat';
+tempSize =[23,23,10];
+% the number of patterns you will skip when scanning TI
+% increase if out of memory
+skipPattern=[8,8,6];
+DistMtrx2 = calculate3DModelVar_CHP(realization1,out,tempSize,skipPattern);
+save('JS_CCSIM_finalfinal.mat', 'DistMtrx2');
+
+
+
+
 %% show 2D case 
 % clear all;
 % load full_cluster_DISPAT_new.mat;
