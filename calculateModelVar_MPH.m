@@ -46,7 +46,7 @@ function DistMtrx = calculateModelVar_MPH(realization1,out,pyramid)
             for j=1:N+1 
                 temp1=hist(MR,i,:);temp2=hist(MR,j,:);
                 temp1=temp1(:);temp2=temp2(:);
-                JS_Pyramid(MR,i,j) = kldiv(X,temp1'+eps,temp2'+eps);
+                JS_Pyramid(MR,i,j) = kldiv(X,temp1'+eps,temp2'+eps,'js');
             
             end
         end
